@@ -1,11 +1,12 @@
 import React , {useEffect, useState} from 'react';
 import ReactCrop ,{ centerCrop, makeAspectCrop }from 'react-image-crop';
 import { useDropzone } from "react-dropzone"
+import 'react-image-crop/dist/ReactCrop.css';
 
 function App() {
 
   const [files,setFiles]=useState([])
-  const [isCrop, setIsCrop] = useState({aspect:12/10});
+  const [isCrop, setIsCrop] = useState({aspect:20/9});
   const [image, setImage] = useState(null);
 
   const {getRootProps,getInputProps,fileRejections}=useDropzone({
